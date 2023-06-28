@@ -11,6 +11,14 @@ body{
   overflow: hidden;
 }
 
+:root {
+  --sandy-brown: #F4A259ff;
+  --raisin-black: #1A1721ff;
+  --licorice: #1B0D10ff;
+  --gray: #7F746Cff;
+  --vanilla: #FEEAA1ff;
+}
+
 header {
   background-Image: url('../src/image-3.jpg');
   background-size: cover;
@@ -203,21 +211,24 @@ footer {
   position: fixed;
   background-color: rgba(248, 247, 247, 0.3);
   right: 0;
-  width: 60px;
-  height: 60px;
-  display: grid;
-  place-content: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
   margin: 20px;
   border-radius: 100%;
   transition: .5s ease;
   cursor: pointer;
-  border: #e75a18 solid 4px;
-  
 }
 
 #return-index:hover {
   transform: scale(1.2);
+}
+
+#return-index img {
+  width: 70%;
 }
 
 .form-group {
@@ -287,7 +298,7 @@ button {
     line-height:100px;
   }
   &:after, &:before {
-    color:#16a085;
+    color: var(--raisin-black);
     font-size:100px;
     animation:2s linear 0s normal none infinite opacity;
     -webkit-animation:2s ease-out 0s normal none infinite opacity;
@@ -357,37 +368,5 @@ width: 980px;
   position: relative;
   right: 10%;
 }
-@-webkit-keyframes opacity {
-  0%   {opacity:0;}
-  50%  {opacity:1;}
-  100% {opacity:0;}
-}
-@keyframes opacity {
-  0%   {opacity:0;}
-  50%  {opacity:1;}
-  100% {opacity:0;}
-}
 
-@-webkit-keyframes change {
-  0%   {margin-top:0;}
-  15%  {margin-top:0;}
-  25%  {margin-top:-100px;}
-  40%  {margin-top:-100px;}
-  50%  {margin-top:-190px;}
-  65%  {margin-top:-190px;}
-  75%  {margin-top:-100px;}
-  85%  {margin-top:-100px;}
-  100% {margin-top:0;}
-}
-@keyframes change {
-  0%   {margin-top:0;}
-  15%  {margin-top:0;}
-  25%  {margin-top:-100px;}
-  40%  {margin-top:-100px;}
-  50%  {margin-top:-190px;}
-  65%  {margin-top:-190px;}
-  75%  {margin-top:-100px;}
-  85%  {margin-top:-100px;}
-  100% {margin-top:0;}
-}
 

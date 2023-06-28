@@ -20,14 +20,13 @@ $(document).ready(function() {
     setBackgroundNav('#a-return', '#main', 'transparent', '1', 1000);
 });
 
-$(window).on("refresh", function(event) {
-      event.preventDefault();
-      $("html, body").animate({scrollTop: $('#main').offset().top }, time);
-      $("#cabeza").css("backgroundColor", "transparent");
-      $("#cabeza").css("opacity", "1");
-      location.reload();
-});
-
+window.onload = function() {
+    //location.reload(html);
+    $("html, body").animate({scrollTop: $("#main").offset().top }, 0);
+    document.getElementById("cabeza").style.backgroundColor = '#2C302F';
+    document.getElementById("cabeza").style.opacity = '.9';
+}
+    
 window.addEventListener("keydown", function(event) {
     if (event.key === "Tab") {
         event.preventDefault();
