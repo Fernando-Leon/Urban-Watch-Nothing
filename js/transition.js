@@ -20,8 +20,8 @@ $(document).ready(function() {
     setBackgroundNav('#a-return', '#main', 'transparent', '1', 1000);
 });
 
-$(window).on("beforeunload", function(event) {
-    //event.preventDefault(); // Prevenir que el navegador muestre el mensaje de confirmación predeterminado
+$(window).on("refresh", function(event) {
+      event.preventDefault();
       $("html, body").animate({scrollTop: $('#main').offset().top }, time);
       $("#cabeza").css("backgroundColor", "transparent");
       $("#cabeza").css("opacity", "1");
@@ -30,6 +30,6 @@ $(window).on("beforeunload", function(event) {
 
 window.addEventListener("keydown", function(event) {
     if (event.key === "Tab") {
-        event.preventDefault(); // Prevenir el comportamiento predeterminado de la tecla Tab
+        event.preventDefault();
     }
 });
