@@ -1,0 +1,23 @@
+/* Hovers */
+.btns-nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1.8px;
+    background-color: #f5ecec;
+    transition: width 0.5s ease;
+}
+
+.btns-nav:hover::after { width: 100%; }
+
+/* Key Frames */
+
+@keyframes blink {
+    0% { color: rgba(255, 255, 255, 0.4); }
+    25% { color: rgba(255, 255, 255, 0.8); }
+    50% { color: rgba(255, 255, 255, 0.2); }
+    75% { color: rgba(255, 255, 255, 0.8); }
+    100% { color: rgba(255, 255, 255, 0.4); }   
+}
